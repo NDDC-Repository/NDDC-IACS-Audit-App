@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using NDDC_IACS_Audit.Models;
 using System.Diagnostics;
 
 namespace NDDC_IACS_Audit.Pages
@@ -13,15 +14,20 @@ namespace NDDC_IACS_Audit.Pages
 		public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
 		private readonly ILogger<ErrorModel> _logger;
+		private readonly NDDCIACSContext context;
 
-		public ErrorModel(ILogger<ErrorModel> logger)
+        public List<Directorate> Directorates { get; set; }
+
+        public ErrorModel(ILogger<ErrorModel> logger, NDDCIACSContext context)
 		{
 			_logger = logger;
+			this.context = context;
 		}
 
 		public void OnGet()
 		{
 			RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+			Directorates = context.Directorates.ToList();
 		}
 	}
 

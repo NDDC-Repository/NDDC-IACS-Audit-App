@@ -1,7 +1,10 @@
+using NDDC_IACS_Audit.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<NDDCIACSContext>();
 
 var app = builder.Build();
 
