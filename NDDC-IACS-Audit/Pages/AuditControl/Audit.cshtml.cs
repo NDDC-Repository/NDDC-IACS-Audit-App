@@ -21,6 +21,7 @@ namespace NDDC_IACS_Audit.Pages.AuditControl
                 .Select(e => new FileControl
                 {
                     // Your other properties here
+                    Id = e.Id,
                     Title = e.Title,
                     Originator = e.Originator,
                     OriginatorName = e.OriginatorName,
@@ -30,6 +31,7 @@ namespace NDDC_IACS_Audit.Pages.AuditControl
                 .Select((e, index) => new FileControl
                 {
                     SrNo = index + 1,
+                    Id = e.Id,
                     Title = e.Title,
                     Originator = e.Originator,
                     OriginatorName = e.OriginatorName,

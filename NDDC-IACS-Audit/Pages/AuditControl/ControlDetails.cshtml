@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model NDDC_IACS_Audit.Pages.AuditControl.ControlDetailsModel
 @{
 }
@@ -79,19 +79,19 @@
                         <tbody>
                             <tr>
                                 <td class="fw-medium">Title:</td>
-                                <td>#VLZ456</td>
+                                <td>@Model.Control.Title</td>
                             </tr>
                             <tr>
                                 <td class="fw-medium">Originator:</td>
-                                <td>Profile Page Satructure</td>
+                                <td>@Model.Control.Originator</td>
                             </tr>
                             <tr>
                                 <td class="fw-medium">Originator Name:</td>
-                                <td>Velzon - Admin Dashboard</td>
+                                <td>@Model.Control.OriginatorName</td>
                             </tr>
                             <tr>
                                 <td class="fw-medium">Directorate:</td>
-                                <td>High</td>
+                                <td>@Model.Control.DirectorateId</td>
                             </tr>
                             <tr>
                                 <td class="fw-medium">Nature of Transaction:</td>
@@ -99,19 +99,19 @@
                             </tr>
                             <tr>
                                 <td class="fw-medium">Requested Amount:</td>
-                                <td><span class="badge badge-soft-primary">200</span></td>
+                                <td><span class="badge badge-soft-primary">@Model.Control.RequestedAmount</span></td>
                             </tr>
                             <tr>
                                 <td class="fw-medium">Vetted Amount:</td>
-                                <td><span class="badge badge-soft-success">100</span></td>
+                                <td><span class="badge badge-soft-success">@Model.Control.VettedAmount</span></td>
                             </tr>
                             <tr>
                                 <td class="fw-medium">Observations:</td>
-                                <td>Velzon - Admin Dashboard</td>
+                                <td>@Model.Control.Observations</td>
                             </tr>
                             <tr>
                                 <td class="fw-medium">Remarks:</td>
-                                <td>Velzon - Admin Dashboard</td>
+                                <td>@Model.Control.Remarks</td>
                             </tr>
                         </tbody>
                     </table>
