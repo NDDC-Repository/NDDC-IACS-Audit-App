@@ -18,5 +18,6 @@ namespace NDDC_IACS_Audit.Models
         public string? Code { get; set; }
         public string? AddedBy { get; set; }
         public DateTime? DateAdded { get; set; }
+        public string? Status { get; set; }
     }
 }

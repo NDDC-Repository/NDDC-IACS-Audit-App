@@ -61,6 +61,8 @@ namespace NDDC_IACS_Audit.Models
 
                 entity.Property(e => e.RequestedAmount).HasColumnType("money");
 
+                entity.Property(e => e.Status).HasMaxLength(50);
+
                 entity.Property(e => e.Title).HasMaxLength(520);
 
                 entity.Property(e => e.VettedAmount).HasColumnType("money");

@@ -20,32 +20,32 @@
 <div class="row justify-content-center">
     <div class="card col-9 border rounded-4 justify-content-center">
         <div class="card-body">
-            <form method="post" enctype="multipart/form-data">
+            <form method="post">
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="firstNameinput" class="form-label">Title</label>
-                            <input type="text" class="form-control bg-light border-0" placeholder="Enter Title (75 char.)" id="firstNameinput" maxlength="75">
+                            <input type="text" asp-for="@Model.Control.Title" class="form-control bg-light border-0" placeholder="Enter Title (75 char.)" id="firstNameinput" maxlength="75">
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <label for="compnayNameinput" class="form-label">Originator</label>
-                        <select class="form-select bg-light border-0 bg-light border-0 mb-3">
+                        <select asp-for="@Model.Control.Originator" class="form-select bg-light border-0 bg-light border-0 mb-3">
                             <option selected="0">Select</option>
-                            <option value="1">Personnel</option>
-                            <option value="2">Consultant</option>
-                            <option value="3">Contractor</option>
+                            <option value="Personnel">Personnel</option>
+                            <option value="Consultant">Consultant</option>
+                            <option value="Contractor">Contractor</option>
                         </select>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="firstNameinput" class="form-label">Originator Name</label>
-                            <input type="text" class="form-control bg-light border-0" placeholder="Enter Title (75 char.)" id="firstNameinput" maxlength="75">
+                            <input type="text" asp-for="@Model.Control.OriginatorName" class="form-control bg-light border-0" placeholder="Enter Title (75 char.)" id="firstNameinput" maxlength="75">
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <label for="compnayNameinput" class="form-label">Directorate</label>
-                        <select class="form-select bg-light border-0 bg-light border-0 mb-3">
+                        <select class="form-select bg-light border-0 bg-light border-0 mb-3" asp-for="@Model.Control.DirectorateId">
                             <option selected="0">Select</option>
                             <option value="1">Personnel</option>
                             <option value="2">Consultant</option>
@@ -54,38 +54,38 @@
                     </div><!--end col-->
                     <div class="col-12">
                         <label for="compnayNameinput" class="form-label">Transaction Type</label>
-                        <select class="form-select bg-light border-0 bg-light border-0 mb-3">
+                        <select class="form-select bg-light border-0 bg-light border-0 mb-3" asp-for="@Model.Control.NatureOfTransaction">
                             <option selected="0">Select</option>
-                            <option value="1">Reimbursement</option>
-                            <option value="2">Retirement</option>
-                            <option value="3">Consultancy</option>
-                            <option value="3">Scholarship</option>
-                            <option value="3">Training</option>
-                            <option value="3">Retreat</option>
+                            <option value="Reimbursment">Reimbursement</option>
+                            <option value="Retirement">Retirement</option>
+                            <option value="Consultancy">Consultancy</option>
+                            <option value="Scholarship">Scholarship</option>
+                            <option value="Training">Training</option>
+                            <option value="Retreat">Retreat</option>
                         </select>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="firstNameinput" class="form-label">Requested Amount</label>
-                            <input type="number" class="form-control bg-light border-0">
+                            <input asp-for="@Model.Control.RequestedAmount" type="number" class="form-control bg-light border-0">
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="firstNameinput" class="form-label">Vetted Amount</label>
-                            <input type="number" class="form-control bg-light border-0">
+                            <input asp-for="@Model.Control.VettedAmount" type="number" class="form-control bg-light border-0">
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="firstNameinput" class="form-label">Observation</label>
-                            <textarea type="text" class="form-control bg-light border-0"></textarea>
+                            <textarea asp-for="@Model.Control.Observations" type="text" class="form-control bg-light border-0"></textarea>
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="firstNameinput" class="form-label">Remarks</label>
-                            <textarea type="text" class="form-control bg-light border-0"></textarea>
+                            <textarea asp-for="@Model.Control.Remarks" type="text" class="form-control bg-light border-0"></textarea>
                         </div>
                     </div><!--end col-->
                     
