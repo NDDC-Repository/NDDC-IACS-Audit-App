@@ -1,0 +1,202 @@
+﻿@page
+@model NDDC_IACS_Audit.Pages.MainMenu.AuditControl.ControlDetailsModel
+@{
+}
+<div class="row g-2 pb-4">
+    <div class="col-sm-4">
+        <h4 class="mb-sm-0">Control Details</h4>
+    </div>
+    <!--end col-->
+    <div class="col-sm-auto ms-auto">
+        <div class="list-grid-nav hstack gap-1">
+           <!-- Grids in modals -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModalgrid">
+                View Checklist
+            </button>
+            <div class="modal fade" id="exampleModalgrid" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalgridLabel">Checklist</h5>
+                            <button type="button" class="btn-close btn-success" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="javascript:void(0);">
+                                <div class="row g-3">
+                                    <div class="col-lg-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlinecheckbox1">Checklist Format</label>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlinecheckbox1">Checklist Format</label>
+                                        </div>
+                                        
+                                    </div><!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlinecheckbox1">Checklist Format</label>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlinecheckbox1">Checklist Format</label>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="option1">
+                                                <label class="form-check-label" for="inlinecheckbox1">Checklist Format</label>
+                                            </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="hstack gap-2 justify-content-end">
+                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-success">Submit</button>
+                                        </div>
+                                    </div>
+                                </div><!--end row-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end col-->
+</div>
+<div class="row">
+    <div class="col-lg-9">
+        <div class="card">
+            <div class="card-body rounded-4 p-3">
+                <div class="table-card">
+                    <table class="table mb-0">
+                        <tbody>
+                            <tr>
+                                <td class="fw-medium">Title:</td>
+                                <td>#VLZ456</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Originator:</td>
+                                <td>Profile Page Satructure</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Originator Name:</td>
+                                <td>Velzon - Admin Dashboard</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Directorate:</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Nature of Transaction:</td>
+                                <td><span class="badge badge-soft-warning">Inprogress</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Requested Amount:</td>
+                                <td><span class="badge badge-soft-primary">200</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Vetted Amount:</td>
+                                <td><span class="badge badge-soft-success">100</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Observations:</td>
+                                <td>Velzon - Admin Dashboard</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Remarks:</td>
+                                <td>Velzon - Admin Dashboard</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--end table-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <h6 class="card-title mb-3 flex-grow-1 text-start">Status: Compliant</h6>
+                <div class="mb-2">
+                    <lord-icon src="https://cdn.lordicon.com/kbtmbyzy.json" trigger="loop" colors="primary:#00bd9d,secondary:#00bd9d" style="width:90px;height:90px">
+                    </lord-icon>
+                </div>
+                <h4 class="fs-14 mb-4 p-2 bg-light">Workflow</h4>
+                <div class="hstack gap-2 justify-content-center">
+                    <ul class="list-unstyled vstack gap-3 mb-0">
+                        <li>
+                            <div class="d-flex align-items-center">
+                                
+                                <div class="flex-grow-1 ms-2">
+                                    <h6 class="mb-1"><a href="pages-profile.html" class="link-secondary">Tonya Noble</a></h6>
+                                    <p class="text-muted mb-0">Developer</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <div class="dropdown">
+                                        <button class="btn btn-icon btn-sm fs-16 text-muted dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-eye-fill text-muted me-2 align-bottom"></i>View</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-star-fill text-muted me-2 align-bottom"></i>Favourite</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-delete-bin-5-fill text-muted me-2 align-bottom"></i>Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center">
+                               
+                                <div class="flex-grow-1 ms-2">
+                                    <h6 class="mb-1"><a href="pages-profile.html" class="link-secondary">Thomas Taylor</a></h6>
+                                    <p class="text-muted mb-0">UI/UX Designer</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <div class="dropdown">
+                                        <button class="btn btn-icon btn-sm fs-16 text-muted dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-eye-fill text-muted me-2 align-bottom"></i>View</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-star-fill text-muted me-2 align-bottom"></i>Favourite</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-delete-bin-5-fill text-muted me-2 align-bottom"></i>Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1 ms-2">
+                                    <h6 class="mb-1"><a href="pages-profile.html" class="link-secondary">Nancy Martino</a></h6>
+                                    <p class="text-muted mb-0">Web Designer</p>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <div class="dropdown">
+                                        <button class="btn btn-icon btn-sm fs-16 text-muted dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-eye-fill text-muted me-2 align-bottom"></i>View</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-star-fill text-muted me-2 align-bottom"></i>Favourite</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0);"><i class="ri-delete-bin-5-fill text-muted me-2 align-bottom"></i>Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
