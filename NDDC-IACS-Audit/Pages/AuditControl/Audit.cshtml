@@ -62,7 +62,7 @@
                                                 <a class="fs-4  pt-0 p-2  text-primary btn text-center" asp-page="/AuditControl/ControlDetails" asp-route-id="@item.Id">
                                                     <i class="las la-pen-square"></i>
                                                 </a>
-                                                <a class="fs-4 pt-0 text-danger btn text-center" href="/Home/Testimonials/DeleteTestimonial/4">
+                                                <a class="fs-4 pt-0 text-danger btn text-center" asp-page="/AuditControl/DeleteAudit" asp-route-id="@item.Id">
                                                     <i class="las la-trash-alt"></i>
                                                 </a>
                                             </td>

@@ -16,6 +16,7 @@ namespace NDDC_IACS_Audit.Models
         {
         }
 
+        public virtual DbSet<ChecklistTemplate> ChecklistTemplates { get; set; } = null!;
         public virtual DbSet<Directorate> Directorates { get; set; } = null!;
         public virtual DbSet<FileControl> FileControls { get; set; } = null!;
 
@@ -30,6 +31,17 @@ namespace NDDC_IACS_Audit.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ChecklistTemplate>(entity =>
+            {
+                entity.ToTable("ChecklistTemplate");
+
+                entity.Property(e => e.AddedBy).HasMaxLength(50);
+
+                entity.Property(e => e.ChecklistItem).HasMaxLength(250);
+
+                entity.Property(e => e.DateAdded).HasColumnType("datetime");
+            });
+
             modelBuilder.Entity<Directorate>(entity =>
             {
                 entity.Property(e => e.AddedBy).HasMaxLength(100);

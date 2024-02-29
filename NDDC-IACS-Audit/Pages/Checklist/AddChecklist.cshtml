@@ -21,12 +21,12 @@
 <div class="row justify-content-center">
     <div class="card col-9 border justify-content-center">
         <div class="card-body">
-            <form method="post" enctype="multipart/form-data">
+            <form method="post">
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="firstNameinput" class="form-label">Checklist Name</label>
-                            <input type="text" class="form-control bg-light border-0" placeholder="Enter Checklist Name (75 char.)" id="firstNameinput" maxlength="75">
+                            <input asp-for="@Model.Checklist.ChecklistItem" type="text" class="form-control bg-light border-0" placeholder="Enter Checklist Name (75 char.)" id="firstNameinput" maxlength="75">
                         </div>
                     </div><!--end col-->
                     <div class="col-lg-12">
