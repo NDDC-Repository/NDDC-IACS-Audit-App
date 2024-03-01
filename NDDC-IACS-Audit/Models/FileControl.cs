@@ -19,5 +19,7 @@ namespace NDDC_IACS_Audit.Models
         public string? AddedBy { get; set; }
         public DateTime? DateAdded { get; set; }
         public string? Status { get; set; }
+
+        public virtual Directorate? Directorate { get; set; }
     }
 }

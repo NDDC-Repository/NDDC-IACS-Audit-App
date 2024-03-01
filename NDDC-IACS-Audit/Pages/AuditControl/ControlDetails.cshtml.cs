@@ -8,6 +8,7 @@ namespace NDDC_IACS_Audit.Pages.AuditControl
     {
         private readonly NDDCIACSContext context;
         public FileControl Control { get; set; }
+        public List<ChecklistTemplate> CheckLists { get; set; }
 
         public ControlDetailsModel(NDDCIACSContext context)
         {
@@ -18,6 +19,8 @@ namespace NDDC_IACS_Audit.Pages.AuditControl
             Control = context.FileControls.ToList()
                 .Where(p => p.Id == id.Value)
                 .First();
+
+            CheckLists = context.ChecklistTemplates.ToList();
         }
     }
 }

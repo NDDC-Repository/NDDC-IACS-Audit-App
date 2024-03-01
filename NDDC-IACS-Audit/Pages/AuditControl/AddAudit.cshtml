@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model NDDC_IACS_Audit.Pages.AuditControl.AddAuditModel
 @{
 }
@@ -24,6 +24,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-3">
+                            <input type="text" hidden asp-for="@Model.Control.Id" class="form-control bg-light border-0" id="idfield">
                             <label for="firstNameinput" class="form-label">Title</label>
                             <input type="text" asp-for="@Model.Control.Title" class="form-control bg-light border-0" placeholder="Enter Title (75 char.)" id="firstNameinput" maxlength="75">
                         </div>
@@ -44,12 +45,9 @@
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
-                        <label for="compnayNameinput" class="form-label">Directorate</label>
-                        <select class="form-select bg-light border-0 bg-light border-0 mb-3" asp-for="@Model.Control.DirectorateId">
+                        <label for="compnayNameinput" class="form-label">Directorate/Department</label>
+                        <select class="form-select bg-light border-0 bg-light border-0 mb-3" asp-for="@Model.Control.DirectorateId" asp-items="@(new SelectList(Model.Departments, "Id", "DirectorateName", Model.Control.DirectorateId))">
                             <option selected="0">Select</option>
-                            <option value="1">Personnel</option>
-                            <option value="2">Consultant</option>
-                            <option value="3">Contractor</option>
                         </select>
                     </div><!--end col-->
                     <div class="col-12">

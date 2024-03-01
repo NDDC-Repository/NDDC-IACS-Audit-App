@@ -6,7 +6,6 @@ namespace NDDC_IACS_Audit.Models
     {
         [NotMapped]
         public int SrNo { get; set; }
-        [NotMapped]
-        public string Directorate { get; set; }
+        
     }
 }

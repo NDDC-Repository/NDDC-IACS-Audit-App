@@ -78,6 +78,12 @@ namespace NDDC_IACS_Audit.Models
                 entity.Property(e => e.Title).HasMaxLength(520);
 
                 entity.Property(e => e.VettedAmount).HasColumnType("money");
+
+                entity.HasOne(d => d.Directorate)
+                    .WithMany(p => p.FileControls)
+                    .HasForeignKey(d => d.DirectorateId)
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("FK_Directorates_Id");
             });
 
             OnModelCreatingPartial(modelBuilder);

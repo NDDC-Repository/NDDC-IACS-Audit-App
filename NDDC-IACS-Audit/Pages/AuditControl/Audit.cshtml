@@ -40,7 +40,7 @@
                                         </th>
                                         <th data-column-id="company" class="gridjs-th" style="width: 250px;">
                                             <div class="gridjs-th-content">Originator Name</div>
-                                        </th>blob:https://teams.microsoft.com/8403afef-5220-4b64-9c0a-4a1560fb6003
+                                        </th>
                                         <th data-column-id="country" class="gridjs-th" style="width: 150px;">
                                             <div class="gridjs-th-content">Date</div>
                                         </th>
@@ -54,12 +54,12 @@
                                     {
                                         <tr class="gridjs-tr">
                                             <td data-column-id="name" class="gridjs-td">@item.SrNo</td>
-                                            <td data-column-id="email" class="gridjs-td">@item.Title</td>
+                                            <td data-column-id="email" class="gridjs-td"><a asp-page="/AuditControl/ControlDetails" asp-route-id="@item.Id">@item.Title</a> </td>
                                             <td data-column-id="position" class="gridjs-td">@item.Originator</td>
                                             <td data-column-id="company" class="gridjs-td">@item.OriginatorName</td>
                                             <td data-column-id="country" class="gridjs-td">@item.DateAdded</td>
                                             <td class="d-flex gridjs-td">
-                                                <a class="fs-4  pt-0 p-2  text-primary btn text-center" asp-page="/AuditControl/ControlDetails" asp-route-id="@item.Id">
+                                                <a class="fs-4  pt-0 p-2  text-primary btn text-center" asp-page="/AuditControl/AddAudit" asp-route-id="@item.Id">
                                                     <i class="las la-pen-square"></i>
                                                 </a>
                                                 <a class="fs-4 pt-0 text-danger btn text-center" asp-page="/AuditControl/DeleteAudit" asp-route-id="@item.Id">
